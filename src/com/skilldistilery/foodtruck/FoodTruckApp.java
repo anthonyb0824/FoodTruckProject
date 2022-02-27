@@ -6,6 +6,7 @@ public class FoodTruckApp {
 
 	public static void main(String[] args) {
 		Scanner kb = new Scanner(System.in);
+		Scanner kb2 = new Scanner(System.in);
 		FoodTruck[] pod = new FoodTruck[5];
 		String name;
 		String foodType;
@@ -19,7 +20,7 @@ public class FoodTruckApp {
 				//if foodTrucksCreated is != 5 break out this loop
 				// Get Food Truck name
 				System.out.println("Enter food truck name: ");
-				name = kb.next();
+				name = kb2.nextLine();
 				// Test if the name entered was quit
 				if ((name.toLowerCase()).equals("quit")) {
 					keepGoing = false;
@@ -52,7 +53,7 @@ public class FoodTruckApp {
 			System.out.println("2. See the average rating of all food trucks.");
 			System.out.println("3. Display the highest-rated food truck.");
 			System.out.println("4. Quit the pogram.\n");
-			String choice = kb.next();
+			String choice = kb2.nextLine();
 			
 			switch(choice) {
 			case "1":
@@ -66,7 +67,7 @@ public class FoodTruckApp {
 			case"2.":
 			case"see the average rating of all food trucks":
 				rating = general.averageRating(pod,foodTrucksCreated);
-				System.out.println("The avaerge rating is: "+rating);
+				System.out.println("The avaerge rating is: "+rating+"\n");
 				break;
 			case "3":
 			case "3.":
@@ -82,6 +83,7 @@ public class FoodTruckApp {
 				break;
 			}
 		}
+		kb2.close();
 		kb.close();
 	}
 
