@@ -13,6 +13,7 @@ public class FoodTruckApp {
 		int foodTrucksCreated = 0;
 		boolean keepGoing = true;		
 		
+		System.out.println("Please enter up to five food trucks!");
 		while (keepGoing) {
 			if(foodTrucksCreated != 5) {
 				//if foodTrucksCreated is != 5 break out this loop
@@ -38,20 +39,20 @@ public class FoodTruckApp {
 				}
 			}
 			else {
+				keepGoing = false;
 				break;
 			}
 		}
 		
 		boolean quitMenu = true;
 		while (quitMenu) {
-			FoodTruck general = new FoodTruck(null, null, 0.0);
-			general.printnumericID(pod, foodTrucksCreated);
+			FoodTruck general = new FoodTruck();
 			
 			System.out.println("1. List all exsiting food trucks.");
 			System.out.println("2. See the average rating of all food trucks.");
 			System.out.println("3. Display the highest-rated food truck.");
 			System.out.println("4. Quit the pogram.\n");
-			String choice = kb.nextLine();
+			String choice = kb.next();
 			
 			switch(choice) {
 			case "1":
@@ -80,6 +81,7 @@ public class FoodTruckApp {
 				break;
 			}
 		}
+		kb.close();
 	}
 
 }

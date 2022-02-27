@@ -45,13 +45,38 @@ public class FoodTruck {
 	}
 
 	public void setNumericRating(double numericRating) {
+
+	
 		this.numericRating = numericRating;
 	}
 
+	
+	public String toString() {
+		StringBuilder builder = new StringBuilder("Food truck name: ");
+		builder.append(this.name);
+		builder.append(".");
+		builder.append(" ");
+		builder.append("It's food type is: ");
+		builder.append(this.foodType);
+		builder.append(".");
+		builder.append(" ");
+		builder.append("It's rating is: ");
+		builder.append(this.numericRating);
+		builder.append(".");
+		builder.append(" ");
+		builder.append("It's numeric ID is: ");
+		builder.append(this.numericID);
+		builder.append(".");
+		
+		String print = builder.toString();
+		return print;
+		
+	}
+	
 	public void listFoodTrucks(FoodTruck[] pod, int num) {
 		// for each loop listing all the food trucks;
 		for (int i = 0; i < num; i++) {
-			System.out.println(pod[i].name);
+			System.out.println(pod[i].toString());
 		}
 		System.out.println("\n");
 	}
@@ -80,7 +105,7 @@ public class FoodTruck {
 		}
 		System.out.println("The Food Truck with the highest rating is: "+mostHigh.name);
 		System.out.println("It's food type is: "+mostHigh.foodType);
-		System.out.println("It's rating: "+mostHigh.numericRating);
+		System.out.println("It's rating: "+mostHigh.numericRating+"\n");
 	}
 	
 	public void printnumericID(FoodTruck[] pod, int num) {
