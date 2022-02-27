@@ -77,6 +77,7 @@ public class FoodTruckApp {
 			case "4":
 			case "4.":
 			case "quit":
+			case "exit":
 				quitMenu = false;
 				break;
 			}
