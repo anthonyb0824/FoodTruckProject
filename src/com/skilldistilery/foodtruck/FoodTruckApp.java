@@ -79,6 +79,7 @@ public class FoodTruckApp {
 			case "4.":
 			case "quit":
 			case "exit":
+				System.out.println("Menu quit");
 				quitMenu = false;
 				break;
 			}
