@@ -12,5 +12,3 @@ Using string builder is sometimes better then creating multiple strings on the h
 
 #### Technologies Used
 Creating my own class, using instances of the class to access methods inside of that class. Utilizing Arrays and string builder. Creating  getters and setters, along with .toString() methods.
-
-#### What was fun?
